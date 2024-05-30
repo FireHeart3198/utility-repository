@@ -1,0 +1,10 @@
+.frame {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-list {
+  position: absolute;
+}

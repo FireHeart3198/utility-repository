@@ -9,8 +9,10 @@ export default [
   },
   pluginJs.configs.recommended,
   {
+    ignores: ["**.config.js", "webpack.*.js", "dist/*"],
+  },
+  {
     files: ["src/**/*.js"],
-    ignores: ["**/*.config.js"],
     rules: {
       semi: ["error", "always"],
 
@@ -162,8 +164,8 @@ export default [
 
       //modules
       "no-duplicate-imports": "error",
-      "import/no-mutable-exports": "error",
-      "import/first": "error",
+      // "import/no-mutable-exports": "error",
+      // "import/first": "error",
       "object-curly-newline": [
         "error",
         {
@@ -189,16 +191,16 @@ export default [
           },
         },
       ],
-      "import/no-webpack-loader-syntax": "error",
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          js: "never",
-          mjs: "never",
-          jsx: "never",
-        },
-      ],
+      // "import/no-webpack-loader-syntax": "error",
+      // "import/extensions": [
+      //   "error",
+      //   "ignorePackages",
+      //   {
+      //     js: "never",
+      //     mjs: "never",
+      //     jsx: "never",
+      //   },
+      // ],
 
       //iterators and generators
       "no-iterator": "error",
@@ -280,7 +282,7 @@ export default [
 
       //conditionals
       "no-cond-assign": "error",
-      "no-const-condition": "error",
+      // "no-const-condition": "error",
       "no-duplicate-case": "error",
 
       //comparison operators & equality
@@ -473,7 +475,7 @@ export default [
           ],
         },
       ],
-      camelcase: true,
+      camelcase: "error",
 
       //type casting & coercion
       "no-new-wrappers": "error",
