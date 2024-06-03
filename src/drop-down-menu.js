@@ -1,9 +1,10 @@
 function toggleVisibility(child) {
+  const currentNode = child;
   const style = getComputedStyle(child).getPropertyValue('visibility');
   if (style === 'visible') {
-    child.style.visibility = 'hidden';
+    currentNode.style.visibility = 'hidden';
   } else {
-    child.style.visibility = 'visible';
+    currentNode.style.visibility = 'visible';
   }
 }
 

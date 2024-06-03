@@ -1,10 +1,38 @@
 .frame {
-  height: 300px;
-  width: 400px;
+  height: 400px;
+  width: 500px;
   overflow: hidden;
   position: relative;
 }
 
-.slide-list {
+.slide-list,
+.navigation {
   position: absolute;
+}
+
+.navigation {
+  z-index: 1000;
+  bottom: 1px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  gap: 1fr;
+  width: 100%;
+  color: white;
+}
+
+.circles {
+  display: flex;
+}
+
+.arrow.right {
+  margin-left: auto;
+}
+
+.circles,
+.arrow {
+  cursor: pointer;
+}
+
+.slide-list {
+  display: flex;
 }
